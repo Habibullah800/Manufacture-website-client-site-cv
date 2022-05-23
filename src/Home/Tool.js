@@ -1,4 +1,5 @@
 import React from 'react';
+import PrimaryBtn from '../Share/PrimaryBtn';
 
 const Tool = ({ tool }) => {
     const { name, img, shortDescription, quantity, availableQuantity, MinimumQuantity, price } = tool;
@@ -13,8 +14,9 @@ const Tool = ({ tool }) => {
                     <h2 class="card-title">Name: {name}</h2>
                     <p>Description: {shortDescription}</p>
                     <h2>Price: {price} Tk</h2>
-                    <div class="card-actions">
-                        <button class="btn btn-primary mt-4">Buy Now</button>
+                    <div class="card-actions mt-4">
+                        <PrimaryBtn> Buy now</PrimaryBtn>
+
                     </div>
                 </div>
             </div>

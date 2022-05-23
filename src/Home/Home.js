@@ -3,6 +3,7 @@ import Footer from '../Share/Footer';
 import Loading from '../Share/Loading';
 import Banner from './Banner';
 import BusinessSummery from './BusinessSummery';
+import ContractUs from './ContractUs';
 import Reviews from './Reviews';
 import Tools from './Tools';
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Tools></Tools>
             <BusinessSummery></BusinessSummery>
             <Reviews></Reviews>
+            <ContractUs></ContractUs>
             <Footer></Footer>
 
         </div>
