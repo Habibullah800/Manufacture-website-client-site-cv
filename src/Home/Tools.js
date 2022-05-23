@@ -11,11 +11,11 @@ const Tools = () => {
     return (
         <div>
             <h2 className='text-2xl font-bold m-6 text-center'>Our Tools</h2>
-            <div className='title'>
+            <div className='title mx-auto'>
 
                 <hr></hr>
 
-                <div className='service-container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {
                         tools.map(tool => <Tool
                             key={tool.id}
