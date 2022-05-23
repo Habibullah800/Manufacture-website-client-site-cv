@@ -2,56 +2,61 @@
     {
         "_id": 1,
         "name": "Teeth Orthodontics",
-        "slots": [
-            "08.00 AM - 08.30 AM",
-            "08.30 AM - 09.00 AM",
-            "09.00 AM - 9.30 AM",
-            "09.30 AM - 10.00 AM",
-            "10.00 AM - 10.30 AM",
-            "10.30 AM - 11.00 AM"
-        ]
+        "img": "https://i.ibb.co/F8nZqyR/glue.jpg",
+        "shortDescription": "Teeth Orthodontics",
+        "quantity": "Teeth Orthodontics",
+        "availableQuantity": "Teeth Orthodontics",
+        "MinimumQuantity": "",
+        "price": 200
     },
     {
         "_id": 2,
-        "name": "Cosmetic Dentistry",
-        "slots": [
-            "09.00 AM - 9.30 AM",
-            "09.30 AM - 10.00 AM",
-            "10.00 AM - 10.30 AM",
-            "10.30 AM - 11.00 AM"
-        ]
+        "name": "Teeth Orthodontics",
+        "img": "https://i.ibb.co/V9tyM8c/sholder.jpg",
+        "shortDescription": "Teeth Orthodontics",
+        "quantity": "Teeth Orthodontics",
+        "availableQuantity": "Teeth Orthodontics",
+        "MinimumQuantity": "",
+        "price": 150
     },
     {
         "_id": 3,
-        "name": "Teeth Cleaning",
-        "slots": []
+        "name": "Teeth Orthodontics",
+        "img": "https://i.ibb.co/vDMSZf2/drill2.jpg",
+        "shortDescription": "Teeth Orthodontics",
+        "quantity": "Teeth Orthodontics",
+        "availableQuantity": "Teeth Orthodontics",
+        "MinimumQuantity": "",
+        "price": 800
     },
     {
         "_id": 4,
-        "name": "Cavity Protection",
-        "slots": [
-            "10.00 AM - 10.30 AM",
-            "10.30 AM - 11.00 AM"
-        ]
+        "name": "Teeth Orthodontics",
+        "img": "https://i.ibb.co/n78CV47/plus.jpg",
+        "shortDescription": "Teeth Orthodontics",
+        "quantity": "Teeth Orthodontics",
+        "availableQuantity": "Teeth Orthodontics",
+        "MinimumQuantity": "",
+        "price": 130
     },
     {
         "_id": 5,
-        "name": "Pediatric Dental",
-        "slots": [
-            "08.30 AM - 09.00 AM",
-            "09.00 AM - 9.30 AM",
-            "09.30 AM - 10.00 AM",
-            "10.00 AM - 10.30 AM",
-            "10.30 AM - 11.00 AM"
-        ]
+        "name": "Teeth Orthodontics",
+        "img": "https://i.ibb.co/NZKbYcc/range.jpg",
+        "shortDescription": "Teeth Orthodontics",
+        "quantity": "Teeth Orthodontics",
+        "availableQuantity": "Teeth Orthodontics",
+        "MinimumQuantity": "",
+        "price": 180
     },
     {
         "_id": 6,
-        "name": "Oral Surgery",
-        "slots": [
-            "09.30 AM - 10.00 AM",
-            "10.00 AM - 10.30 AM",
-            "10.30 AM - 11.00 AM"
-        ]
+        "name": "Teeth Orthodontics",
+        "img": "https://i.ibb.co/q90Z1Xj/hammer.jpg",
+        "shortDescription": "Teeth Orthodontics",
+        "quantity": "Teeth Orthodontics",
+        "availableQuantity": "Teeth Orthodontics",
+        "MinimumQuantity": "",
+        "price": 200
     }
 ]
