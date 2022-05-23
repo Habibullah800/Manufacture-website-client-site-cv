@@ -1,3 +1,4 @@
+
 import './App.css';
 import Navbar from './Share/Navbar';
 import Home from './Home/Home';
@@ -5,8 +6,13 @@ import Home from './Home/Home';
 function App() {
   return (
     <div >
-      <Navbar></Navbar>
-      <Home></Home>
+
+      <Navbar >
+
+        <Home></Home>
+      </Navbar>
+
+
     </div>
   );
 }

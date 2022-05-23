@@ -1,15 +1,18 @@
 import React from 'react';
 
-
 const Banner = () => {
     return (
-        < >
-
-
-            <section class="w-full h-screen">
-                <img src="https://i.ibb.co/CsKRFr4/Toosd-plus.png" class="object-cover lg:w-full lg:h-full md:w-full " alt="Banner" />
-            </section>
-
+        <>
+            <div class="hero min-h-screen bg-base-100">
+                <div class="hero-content flex-col lg:flex-row-reverse m-0 lg:m-4 mr-0 lg:mr-12">
+                    <img src="https://i.ibb.co/kJ3gGc7/kisspng-construction-worker-construction-foreman-architect-gkb-construction-gkb-construction-llp-jai.png" class="lg:max-w-lg rounded-lg shadow-2xl px-6 pt-2 object-fill" alt='banner' />
+                    <div className='px-6'>
+                        <h1 class="text-4xl font-bold text-accent mt-16 lg:mt-2">Work & build smarter with Tools plus!</h1>
+                        <p class="py-6  text-sm lg:text-lg"><span className='font-bold'>Tools plus</span> is best differentiated from alternative solutions by its concurrent mastery of complexity in manufacturing operations. This simultaneously offers you the advantages of capability and simplicity to overcome ANY manufacturing management challenge. Following is an abbreviated list of manufacturing related features provided by <span className='font-bold'>Tools plus</span>.</p>
+                        <button class="btn btn-secondary mx-auto block my-4 lg:my-1">Get Started</button>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };
