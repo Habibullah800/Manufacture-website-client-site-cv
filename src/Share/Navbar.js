@@ -1,6 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import useFirebase from '../Hooks/UseFirebase';
 
 const Navbar = ({ children }) => {
+    const { user, handleSignOut } = useFirebase()
+    const photo = user?.photoURL
     return (<div>
 
 
@@ -16,8 +20,26 @@ const Navbar = ({ children }) => {
                     <div class="flex-1 ">
                         <ul class="menu menu-horizontal">
 
-                            <li><a>Navbar Item 1</a></li>
-                            <li><a>Navbar Item 2</a></li>
+                            <li><a>
+                                {
+                                    user?.uid
+                                        ?
+                                        <div className='dropdown'>
+                                            <button className='btn btn-secondary' onClick={handleSignOut}>Log out
+                                                <i className='fa fa-caret-down'></i>
+                                            </button>
+                                            <div class="avatar">
+                                                <div class="w-6 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 mx-4">
+                                                    <img src={photo} alt='avater' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        :
+                                        <Link className='navText' to='/login'> Login</Link>
+                                }
+                            </a></li>
+                            <li><Link to='/'>Home</Link></li>
+
                         </ul>
                     </div>
                     <div class="flex-none px-2 mx-2 text-xl font-bold">Tools Plus</div>
@@ -32,7 +54,7 @@ const Navbar = ({ children }) => {
             </div>
             <div class="drawer-side mt-16 ">
                 <label for="my-drawer-3" class="drawer-overlay"></label>
-                <ul class="menu p-4 overflow-y-auto w-80 bg-base-100">
+                <ul class="menu p-4 overflow-y-auto lg:w-80 w-26 bg-base-100">
 
                     <li><a>Sidebar Item 1</a></li>
                     <li><a>Sidebar Item 2</a></li>

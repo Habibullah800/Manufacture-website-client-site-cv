@@ -10,7 +10,7 @@ const Tools = () => {
     }, [])
     return (
         <div>
-            <h2 className='text-2xl font-bold m-6 text-center'>Our Tools</h2>
+            <h2 className='text-2xl  m-6 text-center text-accent'>Our Tools</h2>
             <div className='title mx-auto'>
 
                 <hr></hr>

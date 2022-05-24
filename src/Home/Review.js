@@ -15,6 +15,7 @@ const Review = ({ review }) => {
                         <div>
                             <h4 className='text-xl'>{review.name} </h4>
                             <h4>{review.region} </h4>
+                            <span>Rating: {review.rating}</span>
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import useFirebase from '../Hooks/UseFirebase';
+
+
+
 import PrimaryBtn from '../Share/PrimaryBtn';
 
 const Tool = ({ tool }) => {
     const { name, img, shortDescription, quantity, availableQuantity, MinimumQuantity, price } = tool;
+    const { user, } = useFirebase()
+
     return (
         <div >
 
@@ -14,10 +21,21 @@ const Tool = ({ tool }) => {
                     <h2 class="card-title">Name: {name}</h2>
                     <p>Description: {shortDescription}</p>
                     <h2>Price: {price} Tk</h2>
-                    <div class="card-actions mt-4">
-                        <PrimaryBtn> Buy now</PrimaryBtn>
 
-                    </div>
+
+                    {
+                        user?.uid
+                            ?
+                            <div >
+                                <Link className=' ' to='/placeOrder'> <PrimaryBtn> Buy now</PrimaryBtn></Link>
+                            </div>
+                            :
+                            <Link className=' ' to='/login'> <PrimaryBtn> Buy now</PrimaryBtn></Link>
+
+                    }
+
+
+
                 </div>
             </div>
 
