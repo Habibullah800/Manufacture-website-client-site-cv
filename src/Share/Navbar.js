@@ -5,7 +5,7 @@ import useFirebase from '../Hooks/UseFirebase';
 const Navbar = ({ children }) => {
     const { user, handleSignOut } = useFirebase()
     const photo = user?.photoURL
-    return (<div>
+    return (<div >
 
 
 
@@ -14,7 +14,7 @@ const Navbar = ({ children }) => {
             <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col mb-36">
 
-                <div class="w-full navbar bg-base-100 ">
+                <div class="w-full navbar bg-[#7efff5] mb-1 ">
 
 
                     <div class="flex-1 ">

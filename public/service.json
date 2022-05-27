@@ -4,9 +4,9 @@
         "name": "Teeth Orthodontics",
         "img": "https://i.ibb.co/F8nZqyR/glue.jpg",
         "shortDescription": "Teeth Orthodontics",
-        "quantity": "Teeth Orthodontics",
-        "availableQuantity": "Teeth Orthodontics",
-        "MinimumQuantity": "",
+        "quantity": 0,
+        "availableQuantity": 12,
+        "MinimumQuantity": 6,
         "price": 200
     },
     {
@@ -14,9 +14,9 @@
         "name": "Teeth Orthodontics",
         "img": "https://i.ibb.co/V9tyM8c/sholder.jpg",
         "shortDescription": "Teeth Orthodontics",
-        "quantity": "Teeth Orthodontics",
-        "availableQuantity": "Teeth Orthodontics",
-        "MinimumQuantity": "",
+        "quantity": 0,
+        "availableQuantity": 2,
+        "MinimumQuantity": 4,
         "price": 150
     },
     {
@@ -24,9 +24,9 @@
         "name": "Teeth Orthodontics",
         "img": "https://i.ibb.co/vDMSZf2/drill2.jpg",
         "shortDescription": "Teeth Orthodontics",
-        "quantity": "Teeth Orthodontics",
-        "availableQuantity": "Teeth Orthodontics",
-        "MinimumQuantity": "",
+        "quantity": 0,
+        "availableQuantity": 80,
+        "MinimumQuantity": 5,
         "price": 800
     },
     {
@@ -34,9 +34,9 @@
         "name": "Teeth Orthodontics",
         "img": "https://i.ibb.co/n78CV47/plus.jpg",
         "shortDescription": "Teeth Orthodontics",
-        "quantity": "Teeth Orthodontics",
-        "availableQuantity": "Teeth Orthodontics",
-        "MinimumQuantity": "",
+        "quantity": 0,
+        "availableQuantity": 50,
+        "MinimumQuantity": 8,
         "price": 130
     },
     {
@@ -44,9 +44,9 @@
         "name": "Teeth Orthodontics",
         "img": "https://i.ibb.co/NZKbYcc/range.jpg",
         "shortDescription": "Teeth Orthodontics",
-        "quantity": "Teeth Orthodontics",
-        "availableQuantity": "Teeth Orthodontics",
-        "MinimumQuantity": "",
+        "quantity": 0,
+        "availableQuantity": 80,
+        "MinimumQuantity": 7,
         "price": 180
     },
     {
@@ -54,9 +54,9 @@
         "name": "Teeth Orthodontics",
         "img": "https://i.ibb.co/q90Z1Xj/hammer.jpg",
         "shortDescription": "Teeth Orthodontics",
-        "quantity": "Teeth Orthodontics",
-        "availableQuantity": "Teeth Orthodontics",
-        "MinimumQuantity": "",
+        "quantity": 0,
+        "availableQuantity": 60,
+        "MinimumQuantity": 6,
         "price": 200
     }
 ]

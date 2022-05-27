@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Tool from './Tool';
+import AllTool from './AllTool';
 
-const Tools = () => {
+const AllTools = () => {
+
     const [tools, setTools] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/tool')
+        fetch('http://localhost:5000/allTool')
             .then(res => res.json())
             .then(data => setTools(data));
     }, [])
@@ -17,11 +18,11 @@ const Tools = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {
-                        tools.map(tool => <Tool
+                        tools.map(tool => <AllTool
                             key={tool.id}
                             tool={tool}
 
-                        ></Tool>)
+                        ></AllTool>)
                     }
                 </div>
 
@@ -31,4 +32,4 @@ const Tools = () => {
     );
 };
 
-export default Tools;
+export default AllTools;

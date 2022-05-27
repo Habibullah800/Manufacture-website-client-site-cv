@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Review from './Review';
+import PrimaryBtn from '../Share/PrimaryBtn';
+import useFirebase from '../Hooks/UseFirebase';
+import { Link } from 'react-router-dom';
+
 
 const Reviews = () => {
-    const reviews = [
+    const { user, } = useFirebase()
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/review')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    })
+
+
+
+    const myReviews = [
         {
             _id: 1,
             name: 'Winson Herry',
@@ -41,6 +56,23 @@ const Reviews = () => {
                     ></Review>)
                 }
             </div>
+
+
+            <div>
+                {
+                    user?.uid
+                        ?
+                        <div className=' text-center mt-12'>
+                            <Link className=' ' to='/addReview'> <PrimaryBtn> Add a Review</PrimaryBtn></Link>
+                        </div>
+                        :
+                        <div className=' text-center mt-12'>
+                            <Link className=' ' to='/login'> <PrimaryBtn> Add a Review</PrimaryBtn></Link>
+                        </div>
+
+                }
+            </div>
+
         </div>
     );
 };
