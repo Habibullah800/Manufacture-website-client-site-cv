@@ -7,6 +7,7 @@ import Login from './userCreate/Login';
 import Register from './userCreate/Register';
 import AllTools from './Component/AllTools';
 import AddReview from './Home/AddReview';
+import NotFound from './Share/NotFound';
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='register' element={<Register></Register>}></Route>
           <Route path='allTools' element={<AllTools></AllTools>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
       </Navbar>
 
