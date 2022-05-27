@@ -38,7 +38,8 @@ const Navbar = ({ children }) => {
                                         <Link className='navText' to='/login'> Login</Link>
                                 }
                             </a></li>
-                            <li><Link to='/'>Home</Link></li>
+                            <li className='font-semibold'><Link to='/'>Home</Link></li>
+                            <li className='font-semibold'><Link to='myPortfolio'>My Portfolio</Link></li>
 
                         </ul>
                     </div>

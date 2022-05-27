@@ -8,6 +8,7 @@ import Register from './userCreate/Register';
 import AllTools from './Component/AllTools';
 import AddReview from './Home/AddReview';
 import NotFound from './Share/NotFound';
+import MyPortfolio from './Component/MyPortfolio';
 
 
 
@@ -20,6 +21,7 @@ function App() {
           {/* <Route path='/signUp' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route> */}
           <Route path='/' element={<Home></Home>}></Route>
+          <Route path='myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
           <Route path='placeOrder' element={<PlaceOrder></PlaceOrder>}></Route>
           <Route path='login' element={<Login></Login>}></Route>
           <Route path='register' element={<Register></Register>}></Route>
