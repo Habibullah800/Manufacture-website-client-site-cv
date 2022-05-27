@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useFirebase from '../Hooks/UseFirebase';
+import useToken from '../Hooks/useToken';
 import PrimaryBtn from '../Share/PrimaryBtn';
 
 const Tool = ({ tool }) => {
     const { name, img, shortDescription, quantity, availableQuantity, MinimumQuantity, price } = tool;
     const { user, } = useFirebase()
+    const [token] = useToken(user);
+
 
     return (
         <div >
@@ -21,13 +24,13 @@ const Tool = ({ tool }) => {
 
 
                     {
-                        user?.uid
+                        token && user?.uid
                             ?
                             <div >
-                                <Link className=' ' to='/allTools'> <PrimaryBtn> Buy now</PrimaryBtn></Link>
+                                <Link className=' ' to='/allTools'> <PrimaryBtn> Details</PrimaryBtn></Link>
                             </div>
                             :
-                            <Link className=' ' to='/login'> <PrimaryBtn> Buy now</PrimaryBtn></Link>
+                            <Link className=' ' to='/login'> <PrimaryBtn> Details</PrimaryBtn></Link>
 
                     }
 

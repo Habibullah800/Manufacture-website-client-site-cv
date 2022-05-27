@@ -23,7 +23,8 @@ const useFirebase = () => {
 
     const handleSignOut = () => {
         signOut(auth)
-            .then(() => { })
+        localStorage.removeItem('accessToken');
+        // .then(() => { })
 
     }
 

@@ -3,20 +3,30 @@ import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
-
+import useFirebase from '../Hooks/UseFirebase';
+import useToken from '../Hooks/useToken'
 const Register = () => {
+    const { user } = useFirebase()
 
     const navigate = useNavigate();
     const navigateLogin = () => {
         navigate('/login')
     }
 
+    const [token] = useToken(user)
+
     const [error, setError] = useState([]);
 
     const register = event => {
         event.preventDefault();
+        const name = event.target.name.value
+        const phone = event.target.phone.value
+        const location = event.target.location.value
+        const education = event.target.education.value
         const email = event.target.email.value
         const password = event.target.password.value
+
+        console.log(name, phone, location, education, email, password);
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
@@ -45,9 +55,21 @@ const Register = () => {
                 <h3 className='text-2xl my-6'>Please Register</h3>
 
                 <form onSubmit={register}>
-                    {/* <input type='text' name='name' placeholder='Your Name' required></input> */}
+
                     <Form.Group>
-                        <input type='text' name='name' placeholder='Your Name' required class="input input-bordered w-full max-w-xs" />
+                        <input type='text' name='name' placeholder='Your Name' required class="input input-bordered w-full max-w-xs mt-3" />
+
+                    </Form.Group>
+                    <Form.Group>
+                        <input type='number' name='phone' placeholder='Your Phone number' required class="input input-bordered w-full max-w-xs mt-3" />
+
+                    </Form.Group>
+                    <Form.Group>
+                        <input type='text' name='location' placeholder='Your Phone city' required class="input input-bordered w-full max-w-xs mt-3" />
+
+                    </Form.Group>
+                    <Form.Group>
+                        <input type='text' name='education' placeholder='Your last Educational degree' required class="input input-bordered w-full max-w-xs mt-3" />
 
                     </Form.Group>
                     <Form.Group>

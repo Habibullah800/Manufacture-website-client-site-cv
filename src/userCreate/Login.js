@@ -12,9 +12,11 @@ import Footer from '../Share/Footer';
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
-
-
     const { user } = useFirebase()
+    const [token] = useToken(user);
+
+
+    const { signInWithGoogle } = useFirebase();
 
 
 
@@ -33,7 +35,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                console.log('hello', email)
             })
             .catch(error => {
                 const errorMessage = error.message;
@@ -45,7 +47,7 @@ const Login = () => {
 
 
     }
-    const [token] = useToken(user);
+
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -71,7 +73,7 @@ const Login = () => {
 
     }
 
-    const { signInWithGoogle } = useFirebase();
+
 
 
 
@@ -90,7 +92,7 @@ const Login = () => {
                     <div class="flex flex-col w-full border-opacity-50">
                         <div class="grid h-24 card bg-base-100 rounded-box place-items-center">
                             {
-                                user?.uid
+                                token && user?.uid
                                     ?
                                     <div className='mb-4' >
                                         if (user) {
