@@ -1,6 +1,5 @@
 import React from 'react';
 import PrimaryBtn from '../Share/PrimaryBtn';
-import backgroundpic from '../../src/Asset/Untitled design (10).png'
 
 const Banner = () => {
     return (

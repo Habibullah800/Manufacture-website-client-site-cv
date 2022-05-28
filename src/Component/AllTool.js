@@ -1,16 +1,14 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-
+import { useNavigate } from 'react-router-dom';
+import { toast, } from 'react-toastify';
 import useFirebase from '../Hooks/UseFirebase';
-import PrimaryBtn from '../Share/PrimaryBtn';
-import Purchase from './Purchase';
 
 const AllTool = ({ tool }) => {
     const navigate = useNavigate();
-    const { name, img, shortDescription, quantity, availableQuantity, MinimumQuantity, price } = tool;
+    const { name, img, availableQuantity, MinimumQuantity, price } = tool;
     const { user, } = useFirebase()
+    console.log(name);
 
 
     const onSubmit = event => {
@@ -26,7 +24,7 @@ const AllTool = ({ tool }) => {
             quantity: quantity,
         }
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://hidden-plateau-53735.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -43,8 +41,7 @@ const AllTool = ({ tool }) => {
                 else {
                     toast.error('Please, Try again')
                 }
-                // refetch()
-                // setTreatment(null)
+
             })
 
 
@@ -52,21 +49,15 @@ const AllTool = ({ tool }) => {
             alert('We do not have so many products, Reduce the amount')
 
         }
+
         if (MinimumQuantity > quantity) {
             alert('The amount has become much less, Increase the Quantity')
 
         }
-        if (quantity > [] || quantity < 0) {
-            alert(' Increase the Quantity')
-
-        }
-
+        alert('Product added Sucessfully')
 
     }
-    const navigateHome = event => {
-        alert('Tools added sucessfully')
-        navigate('/')
-    }
+
     return (
         <div >
 
@@ -84,7 +75,7 @@ const AllTool = ({ tool }) => {
                         <Form.Group>
                             <input name='quantity' type="text" placeholder="Order Quantity" class="input input-bordered input-xs w-3/4 max-w-xs" />
                         </Form.Group>
-                        <input onClick={navigateHome} className='btn btn-primary mt-5' type='submit' value='Purchase'></input>
+                        <input className='btn btn-primary mt-5' type='submit' value='Purchase'></input>
                     </form>
                 </div>
             </div>

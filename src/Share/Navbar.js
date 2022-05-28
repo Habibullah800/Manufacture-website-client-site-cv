@@ -66,8 +66,15 @@ const Navbar = ({ children }) => {
 
                                 <li className='text-center font-bold'>Dashboard</li>
                                 <Link to='/' className='font-semibold ml-4'><a>Home</a></Link>
+
                                 <li className='font-semibold'><a>My Orders</a></li>
-                                <Link to='addReview' className='font-semibold ml-4'><a>Add A Review</a></Link>
+
+                                <li>
+                                    <Link to='myBooking' className='font-semibold ml-4'><a>^Add A Review</a></Link>
+                                </li>
+
+                                <Link to='myBooking' className='font-semibold ml-4'><a>Add A Review</a></Link>
+
                                 <li className='font-semibold'><a>My Profile</a></li>
 
 

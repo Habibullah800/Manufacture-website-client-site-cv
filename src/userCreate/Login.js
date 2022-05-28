@@ -1,9 +1,8 @@
-import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
+import { sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useEffect, useRef, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../src/firebase.init';
-import app from '../../src/firebase.init';
 import useFirebase from '../../src/Hooks/UseFirebase';
 import useToken from '../Hooks/useToken';
 import Footer from '../Share/Footer';
@@ -14,24 +13,15 @@ const Login = () => {
     const passwordRef = useRef('');
     const { user } = useFirebase()
     const [token] = useToken(user);
-
-
     const { signInWithGoogle } = useFirebase();
-
-
-
     const [email, setEmail] = useState()
-
     const [error, setError] = useState([]);
     const [varification, setVerification] = useState('')
-
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         setEmail(emailRef.current.value);
         const password = passwordRef.current.value;
-
-
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
@@ -40,15 +30,8 @@ const Login = () => {
             .catch(error => {
                 const errorMessage = error.message;
                 setError(errorMessage);
-
-
             })
-        // Email and password
-
-
     }
-
-
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -72,11 +55,6 @@ const Login = () => {
             });
 
     }
-
-
-
-
-
     const navigateRegister = event => {
         navigate('/register')
     }
@@ -114,14 +92,9 @@ const Login = () => {
 
                         </div>
                     </div>
-
-
-
                     <Form onSubmit={handleSubmit}>
                         <Form.Group>
-
                             <input ref={emailRef} required type="email" placeholder='Your Email' class="input input-bordered w-full max-w-xs" />
-
                             <br></br>
                             <br></br>
                         </Form.Group>

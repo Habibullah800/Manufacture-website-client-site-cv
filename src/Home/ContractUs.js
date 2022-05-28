@@ -1,16 +1,12 @@
 import React from 'react';
 import PrimaryBtn from '../Share/PrimaryBtn';
-// import appoinment from '../../assets/images/appointment.png'
+
 
 const ContractUs = () => {
-    // const myStyle = {
-    //     backgroundImage: `url(${appoinment})`,
-    //     height: '490px'
-    // }
+
     return (
-        <div className='d-flex text-center mb-6 '
-        // style={myStyle}
-        >
+        <div className='d-flex text-center mb-6 '>
+
             <div className='text-accent text-3xl mt-8 mb-4' ><h2 >Contract Us</h2></div>
 
 

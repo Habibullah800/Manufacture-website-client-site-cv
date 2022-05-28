@@ -5,7 +5,7 @@ const AllTools = () => {
 
     const [tools, setTools] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allTool')
+        fetch('https://hidden-plateau-53735.herokuapp.com/allTool')
             .then(res => res.json())
             .then(data => setTools(data));
     }, [])

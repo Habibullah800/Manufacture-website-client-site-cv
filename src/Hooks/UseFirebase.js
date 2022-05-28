@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react"
-import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
 import auth from "../firebase.init";
-
-
-
 const googleProvider = new GoogleAuthProvider();
-
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
@@ -24,8 +20,6 @@ const useFirebase = () => {
     const handleSignOut = () => {
         signOut(auth)
         localStorage.removeItem('accessToken');
-        // .then(() => { })
-
     }
 
     useEffect(() => {

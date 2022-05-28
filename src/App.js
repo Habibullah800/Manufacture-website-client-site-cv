@@ -11,17 +11,14 @@ import NotFound from './Share/NotFound';
 import MyPortfolio from './Component/MyPortfolio';
 import Purchase from './Component/Purchase';
 import Blog from './Home/Blog';
-
-
+import { ToastContainer } from 'react-toastify';
+import MyBooking from './Component/MyBooking';
 
 function App() {
   return (
     <div >
-
       <Navbar >
         <Routes>
-          {/* <Route path='/signUp' element={<SignUp></SignUp>}></Route>
-        <Route path='/login' element={<Login></Login>}></Route> */}
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
           <Route path='placeOrder' element={<Purchase></Purchase>}></Route>
@@ -29,9 +26,11 @@ function App() {
           <Route path='register' element={<Register></Register>}></Route>
           <Route path='allTools' element={<AllTools></AllTools>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
+          <Route path='myBooking' element={<MyBooking></MyBooking>}></Route>
           <Route path='blog' element={<Blog></Blog>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
+        <ToastContainer></ToastContainer>
       </Navbar>
 
 

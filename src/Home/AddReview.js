@@ -1,7 +1,6 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 import useFirebase from '../Hooks/UseFirebase';
 import Footer from '../Share/Footer';
 
@@ -24,7 +23,7 @@ const AddReview = () => {
 
         //Send data to the review server
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://hidden-plateau-53735.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -38,14 +37,11 @@ const AddReview = () => {
                 event.target.reset();
                 navigate('/')
             })
-
     }
 
     return (
         <>
             <div className='text-center border border-indigo-600 w-96 mx-auto rounded-md my-6'>
-
-
                 {
                     user?.uid
                         ?
@@ -76,8 +72,6 @@ const AddReview = () => {
 
                                 </Form.Group>
 
-
-
                                 <input className='btn btn-primary  mx-auto block' type='submit' value='Add' ></input>
                                 <br></br>
                             </Form>
@@ -93,8 +87,6 @@ const AddReview = () => {
                 }
 
             </div>
-
-
             <div>
                 <Footer></Footer>
             </div>
