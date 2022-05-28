@@ -40,6 +40,7 @@ const Navbar = ({ children }) => {
                             </a></li>
                             <li className='font-semibold'><Link to='/'>Home</Link></li>
                             <li className='font-semibold'><Link to='myPortfolio'>My Portfolio</Link></li>
+                            <li className='font-semibold'><Link to='blog'>Blog</Link></li>
 
                         </ul>
                     </div>
@@ -53,12 +54,35 @@ const Navbar = ({ children }) => {
                 </div>
                 {children}
             </div>
+
+
             <div class="drawer-side mt-16 ">
                 <label for="my-drawer-3" class="drawer-overlay"></label>
                 <ul class="menu p-4 overflow-y-auto lg:w-80 w-26 bg-base-100">
+                    {
+                        user?.uid
+                            ?
+                            <div className='dropdown'>
 
-                    <li><a>Sidebar Item 1</a></li>
-                    <li><a>Sidebar Item 2</a></li>
+                                <li className='text-center font-bold'>Dashboard</li>
+                                <Link to='/' className='font-semibold ml-4'><a>Home</a></Link>
+                                <li className='font-semibold'><a>My Orders</a></li>
+                                <Link to='addReview' className='font-semibold ml-4'><a>Add A Review</a></Link>
+                                <li className='font-semibold'><a>My Profile</a></li>
+
+
+
+
+
+                            </div>
+                            :
+                            <div className='text-center font-semibold'>
+                                <li>Please log in First</li>
+
+                            </div>
+                    }
+
+
 
                 </ul>
 

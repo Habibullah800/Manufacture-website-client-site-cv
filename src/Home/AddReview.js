@@ -80,8 +80,6 @@ const AddReview = () => {
 
                                 <input className='btn btn-primary  mx-auto block' type='submit' value='Add' ></input>
                                 <br></br>
-
-
                             </Form>
                         </div>
                         :
